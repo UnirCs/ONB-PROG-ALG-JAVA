@@ -1,0 +1,20 @@
+INICIO
+    contadorPares = 0
+
+    REPETIR
+        Mostrar "¿Desea ingresar un número? (S/N)"
+        Leer opcion
+        SI opcion == 'S' ENTONCES
+            Leer n
+            SI (n % 2 == 0) ENTONCES
+                contadorPares = contadorPares + 1
+                Mostrar "El número es par"
+            SINO
+                Mostrar "El número es impar"
+            FIN_SI
+        FIN_SI
+    HASTA opcion == 'N'
+
+    Mostrar "Total de números pares: " + contadorPares
+    Mostrar "Fin del algoritmo"
+FIN

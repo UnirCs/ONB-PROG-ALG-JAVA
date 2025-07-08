@@ -1,0 +1,23 @@
+INICIO
+    mesasDisponibles = 5
+
+    REPETIR
+        Mostrar "¿Desea cerrar las reservas? (S/N)"
+        Leer respuesta
+        SI respuesta == 'S' ENTONCES
+            SALIR_DEL_BUCLE
+        FIN_SI
+
+        Solicitar "Ingrese nombre del cliente y número de personas"
+
+        SI mesasDisponibles > 0 ENTONCES
+            mesasDisponibles = mesasDisponibles - 1
+            Mostrar "Reserva confirmada. Quedan " + mesasDisponibles + " mesas."
+        SINO
+            Mostrar "Lo sentimos, no hay mesas disponibles."
+        FIN_SI
+
+    HASTA FALSO  // Se interrumpe con 'S'
+
+    Mostrar "Fin del sistema de reservas"
+FIN

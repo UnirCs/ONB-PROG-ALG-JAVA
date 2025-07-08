@@ -1,0 +1,34 @@
+INICIO
+    // Ejemplo de inicialización
+    // inventario = { "ProductoA": 10, "ProductoB": 5, "ProductoC": 2 }
+    Inicializar inventario con algunos productos o vacío
+
+    REPETIR
+        Mostrar "¿Desea terminar el día? (S/N)"
+        Leer respuesta
+        SI respuesta == 'S' ENTONCES
+            SALIR_DEL_BUCLE
+        FIN_SI
+
+        Mostrar "¿Agregar (A) o Retirar (R)?"
+        Leer operacion
+
+        SI operacion == 'A' ENTONCES
+            Leer nombreProducto
+            Leer cantidadAgregar
+            Agregar cantidadAgregar a inventario[nombreProducto]
+        SINO
+            Leer nombreProducto
+            Leer cantidadRetirar
+            SI inventario[nombreProducto] >= cantidadRetirar ENTONCES
+                Restar cantidadRetirar de inventario[nombreProducto]
+            SINO
+                Mostrar "Error: Cantidad insuficiente en inventario."
+            FIN_SI
+        FIN_SI
+    HASTA FALSO
+
+    Mostrar "Inventario final:"
+    Mostrar inventario
+    Mostrar "Fin del día"
+FIN
