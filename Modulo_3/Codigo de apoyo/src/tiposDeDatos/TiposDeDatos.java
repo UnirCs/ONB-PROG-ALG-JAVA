@@ -18,7 +18,7 @@ public class TiposDeDatos {
         System.out.println();
 
         // Tipos de datos no primitivos: objetos
-        // Creamos un objeto de tipo Coche
+        // Creamos un objeto de tipo vehiculos.Coche
         Coche miCoche = new Coche("Toyota", "Corolla", 2022, "Rojo");
 
         // Mostramos sus atributos usando getters
